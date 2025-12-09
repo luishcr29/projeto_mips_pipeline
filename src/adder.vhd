@@ -1,0 +1,12 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+ENTITY adder IS -- adder
+    PORT (
+        a, b : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        y : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END;
+ARCHITECTURE behave OF adder IS
+BEGIN
+    y <= STD_LOGIC_VECTOR(signed(a) + signed(b));
+END;
